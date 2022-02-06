@@ -1,0 +1,8 @@
+{
+    "editor.fontSize": 12,
+    "window.zoomLevel": 1,
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": false,
+    "terminal.integrated.fontSize": 12,
+    "editor.formatOnSave" : true
+}

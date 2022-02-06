@@ -1,6 +1,17 @@
 # github-actions
 
-## prettier対応　整形コマンド
+準備
+- ローカル用の.vscode
+- 
+
+### セットアップ準備
+ローカルのpackage.jsonをインストールする
+https://qiita.com/Sekky0905/items/452619651cdd950c2271
 ```#bash
-~/workspace/github-actions$ node_modules/.bin/eslint --fix --ext .js,.vue --ignore-path .gitignore .
+$ npm install --save-dev
+```
+
+### 実行
+```
+$ npm fix run
 ```

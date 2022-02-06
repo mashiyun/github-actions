@@ -1,17 +1,22 @@
 {
-    "name": "fizz-buzz",
-    "version": "1.0.0",
-    "main": "index.js",
+    "name": "integrate-prettier-with-eslint",
     "scripts": {
-        "lint": "eslint .",
-        "test": "mocha"
+        "format": "prettier --write app.js",
+        "lint": "eslint --fix app.js",
+        "fix": "npm run format && npm run lint",
+        "prepare": "husky install"
     },
-    "license": "MIT",
+    "lint-staged": {
+        "*.js": [
+            "prettier --write",
+            "eslint --fix"
+        ]
+    },
     "devDependencies": {
-        "@cybozu/eslint-config": "^11.0.0",
-        "eslint": "^7.3.1",
-        "mocha": "^8.0.1",
-        "prettier": "^2.0.5"
-    },
-    "dependencies": {}
+        "eslint": "^7.26.0",
+        "eslint-config-prettier": "^8.3.0",
+        "husky": "^6.0.0",
+        "lint-staged": "^11.0.0",
+        "prettier": "^2.3.0"
+    }
 }
